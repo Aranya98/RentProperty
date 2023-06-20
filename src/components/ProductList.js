@@ -15,8 +15,8 @@ const ProductList = ({ main ,search}) => {
      {(search !== "") && item.filter(element => (element.area.toLowerCase().includes(search.toLowerCase()))).map(
         (item, ind) => <HouseCard val={item} id={ind} key={ind} />)}
        
-      {main.length > 0 && search==""&&main.map((val) => <HouseCard val={val} />) }
-      {main.length==0&&search==""&&item.map((val) => <HouseCard val={val} search={search} />)}
+      {main.length > 0 && search=="" && main.map((val) => <HouseCard val={val} />) }
+      {main.length==0 && search=="" && item.map((val) => <HouseCard val={val} />)}
     </div>
   )
 }

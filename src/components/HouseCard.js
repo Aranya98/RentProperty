@@ -36,12 +36,14 @@ const{favItem}=data
   return (
     <>
       <div className="containerChild">
-        <div>
           <img className="Houses" src={val.img} alt="" />
+        <div className="House_row"> 
+          <div>
           <h5>Location:{val.area}</h5>
           <h5>Rent:₹{val.price}/{val.priceType}</h5>
+          </div>
+        <div onClick={() => handleFavourite(val)}><img className="logo" src={val.favourite ? "https://cdn-icons-png.flaticon.com/512/1828/1828884.png": "https://cdn-icons-png.flaticon.com/512/1946/1946408.png"} alt="" /></div>
         </div>
-        <div onClick={() => handleFavourite(val)}><img className="logo" src={val.favourite ? "https://www.skynavgps.com/images/feature.png" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxWMg9JtBWhK5HFEvEROSHZtL5mT6B3jXqtT89o77sy5TScflugTGDnOdGIBygl6XUhgU&usqp=CAU"} alt="" /></div>
       </div>
     </>
   )

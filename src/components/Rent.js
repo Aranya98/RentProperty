@@ -37,7 +37,7 @@ const Rent = () => {
     <div>
 
       <div className="header">
-        <h1>Search properties to rent</h1>
+        <h1 style={{fontSize:"50px"}}>Search properties to rent</h1>
         <input id="priceRange" type="text" onChange={(e)=>setSearch(e.target.value)} placeholder="Please enter your area"/>
          
       </div>
@@ -58,7 +58,7 @@ const Rent = () => {
 
           <div>
             <label className="lab">When</label><br />
-            <input type="date" onChange={(e) => setDate(e.target.value)} id="dte" />
+            <input className="sel" type="date" onChange={(e) => setDate(e.target.value)} id="dte" />
           </div>
 
           <div>
@@ -81,7 +81,7 @@ const Rent = () => {
             </select>
 
           </div>
-          <button id="btn3" onClick={() => SearchList()}>Search</button>
+          <button id="btn3" style={{cursor:"pointer"}} onClick={() => SearchList()}>Search</button>
 
 
 

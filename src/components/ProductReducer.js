@@ -139,9 +139,8 @@ const productSlice = createSlice({
         removeItem(state, action) {
             state.favItem.splice(action.payload.id, 1)
         },
-        changeFavValue(state, actions) {
+        changeFavValue(state,actions) {
             state.item.filter((obj) => obj.id === actions.payload.id)[0].favourite = actions.payload.value;
-            console.log(actions.payload)
         }
 
     }

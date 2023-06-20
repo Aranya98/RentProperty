@@ -8,15 +8,35 @@ const ProductList=useSelector(state=>state.product.favItem)
 
   return (
     <div>
-      <center><h2>Favourite Property List</h2></center>
+        <table>
+  <caption><h2>Favourite Property List</h2></caption>
+  <thead>
+    <tr>
+      <th scope="col">Houses</th>
+      <th scope="col">Rent</th>
+      <th scope="col">Location</th>
+      <th scope="col">Property Type</th>
+    </tr>
+  </thead>
      {ProductList.map((item)=>
-      <div id="favContainer">
-        <img className="Houses" src={item.img} alt=""/>
-        <h3>Rent:₹{item.price}/{item.priceType}</h3>
-        <h5>Location:{item.area}</h5>
-        <h5>Property Type:{item.propertyType}</h5>
-      </div>
-     )}
+      
+          <tbody>
+            <tr>
+      <td className="favImg"  data-label="Account"><img className="Houses1" src={item.img} alt={item.name}/></td>
+      <td data-label="Due Date">₹{item.price}/{item.priceType}</td>
+      <td data-label="Amount">{item.area}</td>
+      <td data-label="Period">{item.propertyType}</td>
+    </tr>
+          </tbody>
+          // <tr>
+          //   <td><img className="Houses1" src={item.img} alt={item.name}/></td>
+          //   <td>₹{item.price}/{item.priceType}</td>
+          //   <td>{item.area}</td>
+          //   <td>{item.propertyType}</td>
+          // </tr>
+
+)}
+</table>
     </div>
   )
 }
